@@ -3,6 +3,7 @@ Code examples using cardano-cli to create Transactions, Native Token, NFT from s
 
 **Table of contents**
 - [Prerequisites](#Prerequisites)
+- [Verify everything is set up properly](#Verify-everything-is-set-up-properly)
 
 ## Prerequisites
 
