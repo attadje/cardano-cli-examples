@@ -13,7 +13,7 @@ Code examples using cardano-cli to create Transactions, Native Token, NFT from s
 pip install jupyterlab
 ```
 
-1. Verify everything is set up properly
+## Verify everything is set up properly
 
 cardano-cli
 
