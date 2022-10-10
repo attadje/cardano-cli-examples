@@ -7,7 +7,9 @@ Code examples using cardano-cli to create Transactions, Native Token, NFT from s
 ## Prerequisites
 
 - cardano-node / cardano-cli set up on local machine (https://docs.cardano.org/projects/cardano-node/en/latest)
-- jupyter-lab (https://pypi.org/project/jupyterlab/)
+- For the examples the jupyter-lab (https://pypi.org/project/jupyterlab/).
+Jupyter Notebook allows to share code and run it in the same user interface.
+It can combine code from different languages (Python, bash, ...), graphics, visualizations and text in shareable notebooks that run in a web browser.
 
 ```
 pip install jupyterlab
