@@ -4,16 +4,16 @@ Code examples using cardano-cli to create Transactions, Native Token, NFT from s
 **Table of contents**
 - [Prerequisites](#Prerequisites)
 - [Verify everything is set up properly](#Verify-everything-is-set-up-properly)
-- [How to create an address](https://github.com/attadje/cardano-cli-examples/blob/main/1-address/how-to-create-an-address.ipynb)
+- [How to create an address](https://github.com/attadje/cardano-cli-examples/blob/main/1-address/how-to-create-an-address.md)
 
 ## Prerequisites
 
 - cardano-node / cardano-cli set up on local machine (https://docs.cardano.org/projects/cardano-node/en/latest)
-- jupyter-lab (https://pypi.org/project/jupyterlab/).  
+- In the examples i use some bash command.
+- The example was created using jupyter lab.
 Jupyter Notebook allows to share code and run it in the same user interface.  
 It can combine code from different languages (Python, bash, ...), graphics, visualizations and text in shareable notebooks that run in a web browser.  
-
-If you dont want to use jupyter lab, you just have to copy/past the bash code into your shell.
+If you use jupyter lab, the notebook with the code is save in the same emplacement that the markdown file.
 ```
 pip install jupyterlab
 ```
