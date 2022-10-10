@@ -91,11 +91,3 @@ echo $(bech32 <<< $(cat $walletDir/drake.addr2))
 walletDir=$(cat /users/$(whoami)/testnet/priv/wallet/drake/drake.addr2)
 cardano-cli query utxo --address $walletDir --testnet-magic 1
 ```
-
-```python
-!jupytext --to markdown how-to-create-an-address.ipynb
-```
-
-```python
-
-```
