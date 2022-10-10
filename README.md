@@ -43,7 +43,7 @@ git rev 950c4e222086fed5ca53564e642434ce9307b0b9
 
 jupyter-lab
 ```
-pip install jupyterlab
+jupyter lab --version
 ```
 
 output should be similar:
