@@ -1,3 +1,17 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.3'
+      jupytext_version: 1.14.1
+  kernelspec:
+    display_name: Python 3
+    language: python
+    name: python3
+---
+
 # How to create an address
 
 Examples on how to create different kinds of addresses on the cardano blockchain.
@@ -18,7 +32,7 @@ mkdir -p $walletDir
 
 # 1) Create a payment address with no staking right
 
-An addresse with no stakink right have only a payment part, so it mean that the owner of the address have the control of the funds but not on the staking rights.
+An addresse with no staking right have only a payment part, so it mean that the owner of the address have the control of the funds but not have no staking rights of funds.
 
 
 ### Create the address 
@@ -90,4 +104,12 @@ echo $(bech32 <<< $(cat $walletDir/djessy.addr2))
 ```bash
 walletDir=$(cat /users/$(whoami)/testnet/priv/wallet/drake/djessy.addr2)
 cardano-cli query utxo --address $walletDir --testnet-magic 1
+```
+
+```python
+!jupytext --to markdown how-to-create-an-address.ipynb
+```
+
+```python
+
 ```
