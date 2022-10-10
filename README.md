@@ -13,7 +13,7 @@ Code examples using cardano-cli to create Transactions, Native Token, NFT from s
 - The example was created using jupyter lab.
 Jupyter Notebook allows to share code and run it in the same user interface.  
 It can combine code from different languages (Python, bash, ...), graphics, visualizations and text in shareable notebooks that run in a web browser.  
-If you use jupyter lab, the notebook with the code is save in the same emplacement that the markdown file.
+If you have jupyter lab installed or want to install it, the notebook with the code is saved in the same emplacement that the markdown file.
 ```
 pip install jupyterlab
 ```
