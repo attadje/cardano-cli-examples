@@ -1,17 +1,3 @@
----
-jupyter:
-  jupytext:
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.14.1
-  kernelspec:
-    display_name: Python 3
-    language: python
-    name: python3
----
-
 # How to create an address
 
 Examples on how to create different kinds of addresses on the cardano blockchain.
@@ -121,9 +107,12 @@ addr_test1qz83jdf92qc3ztjhsa8qxcwsccsj27gltd9x5gry7gswx74d28swvcn7t7yysu0gdeavmr
 walletDir=$(cat /users/$(whoami)/testnet/priv/wallet/drake/drake.addr2)
 cardano-cli query utxo --address $walletDir --testnet-magic 1
 ```
+<<<<<<< HEAD
 
 ```bash
                            TxHash                                 TxIx        Amount
 --------------------------------------------------------------------------------------
 a9ed1f9dd03fb6226f7ceab1c17e8dfb61ae0fadef7a51c0e53b672914676ca6     0        10000000000 lovelace + TxOutDatumNone
 ```
+=======
+>>>>>>> 71ae08dcabcf98d51685bda7ab80f8238b3f5738
