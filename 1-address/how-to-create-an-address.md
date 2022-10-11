@@ -24,8 +24,6 @@ An addresse with no staking right have only a payment part, so it mean that the 
 ### Create the address 
 
 ```bash
-walletDir=/users/$(whoami)/testnet/priv/wallet/drake
-
 # Create the verification and signing key files for the payment address 
 cardano-cli address key-gen \
 --verification-key-file $walletDir/drake.addr.vkey \
@@ -53,8 +51,7 @@ addr_test1vpyy5wscvu466yavkjjzdxh5nuk4xk5uz32e9jsqzu9n7dslhpwut
 Use [cardano faucette](https://docs.cardano.org/cardano-testnet/tools/faucet) to send tADA to the address.
 
 ```bash
-walletDir=$(cat /users/$(whoami)/testnet/priv/wallet/drake/drake.addr)
-cardano-cli query utxo --address $walletDir --testnet-magic 1
+cardano-cli query utxo --address $walletDir/drake.addr --testnet-magic 1
 ```
 
 ```bash
@@ -71,8 +68,6 @@ The owner of this address will have the control of the funds and the staking rig
 ### Create the address
 
 ```bash
-walletDir=/users/$(whoami)/testnet/priv/wallet/drake
-
 # Create the verification and signing key files for the payment address 
 cardano-cli address key-gen \
 --verification-key-file $walletDir/drake-payment.addr.vkey \
@@ -104,10 +99,8 @@ addr_test1qz83jdf92qc3ztjhsa8qxcwsccsj27gltd9x5gry7gswx74d28swvcn7t7yysu0gdeavmr
 ### Get the UTXOs from the address
 
 ```bash
-walletDir=$(cat /users/$(whoami)/testnet/priv/wallet/drake/drake.addr2)
-cardano-cli query utxo --address $walletDir --testnet-magic 1
+cardano-cli query utxo --address $walletDir/drake.addr2 --testnet-magic 1
 ```
-<<<<<<< HEAD
 
 ```bash
                            TxHash                                 TxIx        Amount
@@ -115,4 +108,3 @@ cardano-cli query utxo --address $walletDir --testnet-magic 1
 a9ed1f9dd03fb6226f7ceab1c17e8dfb61ae0fadef7a51c0e53b672914676ca6     0        10000000000 lovelace + TxOutDatumNone
 ```
 =======
->>>>>>> 71ae08dcabcf98d51685bda7ab80f8238b3f5738
