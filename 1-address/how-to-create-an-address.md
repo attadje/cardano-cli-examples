@@ -123,6 +123,7 @@ cardano-cli query utxo --address $walletDir --testnet-magic 1
 ```
 
 ```bash
-addr_test1qz83jdf92qc3ztjhsa8qxcwsccsj27gltd9x5gry7gswx74d28swvcn7t7yysu0gdeavmrfge4ktqva7eyewzde0av3spdpec5
-008f1935255031112e57874e0361d0c62125791f5b4a6a2064f220e37aad51e0e6627e5f884871e86e7acd8d28cd6cb033bec932e1372feb23
+                           TxHash                                 TxIx        Amount
+--------------------------------------------------------------------------------------
+a9ed1f9dd03fb6226f7ceab1c17e8dfb61ae0fadef7a51c0e53b672914676ca6     0        10000000000 lovelace + TxOutDatumNone
 ```
