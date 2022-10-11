@@ -107,4 +107,3 @@ cardano-cli query utxo --address $walletDir/drake.addr2 --testnet-magic 1
 --------------------------------------------------------------------------------------
 a9ed1f9dd03fb6226f7ceab1c17e8dfb61ae0fadef7a51c0e53b672914676ca6     0        10000000000 lovelace + TxOutDatumNone
 ```
-=======
