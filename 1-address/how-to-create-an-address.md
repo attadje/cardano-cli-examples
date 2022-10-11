@@ -57,6 +57,11 @@ echo $(cat $walletDir/drake.addr)
 echo $(bech32 <<< $(cat $walletDir/drake.addr))
 ```
 
+```bash
+addr_test1vpyy5wscvu466yavkjjzdxh5nuk4xk5uz32e9jsqzu9n7dslhpwut
+60484a3a18672bad13acb4a4269af49f2d535a9c145592ca00170b3f36
+```
+
 ### Send and get the UTXOs from the address
 
 Use [cardano faucette](https://docs.cardano.org/cardano-testnet/tools/faucet) to send tADA to the address.
@@ -64,6 +69,12 @@ Use [cardano faucette](https://docs.cardano.org/cardano-testnet/tools/faucet) to
 ```bash
 walletDir=$(cat /users/$(whoami)/testnet/priv/wallet/drake/drake.addr)
 cardano-cli query utxo --address $walletDir --testnet-magic 1
+```
+
+```bash
+                           TxHash                                 TxIx        Amount
+--------------------------------------------------------------------------------------
+9088035211336c207022fad02f9b938d08ce4e0f2d2ca969c310ec2edcaaf714     0        10000000000 lovelace + TxOutDatumNone
 ```
 
 # 2) Create a payment address with staking right
@@ -99,6 +110,11 @@ echo $(cat $walletDir/drake.addr2)
 echo $(bech32 <<< $(cat $walletDir/drake.addr2))
 ```
 
+```bash
+addr_test1qz83jdf92qc3ztjhsa8qxcwsccsj27gltd9x5gry7gswx74d28swvcn7t7yysu0gdeavmrfge4ktqva7eyewzde0av3spdpec5
+008f1935255031112e57874e0361d0c62125791f5b4a6a2064f220e37aad51e0e6627e5f884871e86e7acd8d28cd6cb033bec932e1372feb23
+```
+
 ### Get the UTXOs from the address
 
 ```bash
@@ -106,10 +122,7 @@ walletDir=$(cat /users/$(whoami)/testnet/priv/wallet/drake/drake.addr2)
 cardano-cli query utxo --address $walletDir --testnet-magic 1
 ```
 
-```python
-!jupytext --to markdown how-to-create-an-address.ipynb
-```
-
-```python
-
+```bash
+addr_test1qz83jdf92qc3ztjhsa8qxcwsccsj27gltd9x5gry7gswx74d28swvcn7t7yysu0gdeavmrfge4ktqva7eyewzde0av3spdpec5
+008f1935255031112e57874e0361d0c62125791f5b4a6a2064f220e37aad51e0e6627e5f884871e86e7acd8d28cd6cb033bec932e1372feb23
 ```
