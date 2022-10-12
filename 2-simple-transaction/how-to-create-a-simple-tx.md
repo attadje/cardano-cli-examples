@@ -1,17 +1,3 @@
----
-jupyter:
-  jupytext:
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.14.1
-  kernelspec:
-    display_name: Python 3
-    language: python
-    name: python3
----
-
 # How to create a simple transaction
 
 In this example we will create an submit a transaction to the testnet using the command build and build raw.
@@ -26,7 +12,6 @@ The downside of using the build command is that you can't build the transaction 
 ### Get utxo from the address of the sender
 
 ```bash
-# User 1 address
 addrUser1=$(cat /users/$(whoami)/testnet/priv/wallet/Djessy/djessy.addr)
 # Get the utxo from the user1 address
 cardano-cli query utxo --address $addrUser1 --testnet-magic 1
@@ -65,6 +50,8 @@ from cardano_py_tools import transaction as tx
 tx.vizualisation(txFile="tx-files/tx-one.signed", saveTo="tx-files/tx-one.svg")
 SVG("tx-files/tx-one.svg")
 ```
+
+![tx-one](./tx-files/tx-one.svg)
 
 ### Submit the transaction
 
@@ -141,6 +128,8 @@ tx.vizualisation(txFile="tx-files/tx-two.signed", saveTo="tx-files/tx-two.svg")
 SVG("tx-files/tx-two.svg")
 ```
 
+![tx-two](./tx-files/tx-two.svg)
+
 ### Submit the transaction
 
 ```bash
@@ -157,10 +146,3 @@ cardano-cli query utxo \
 --testnet-magic 1
 ```
 
-```python
-!jupytext --to markdown how-to-create-a-simple-tx.ipynb
-```
-
-```python
-
-```
