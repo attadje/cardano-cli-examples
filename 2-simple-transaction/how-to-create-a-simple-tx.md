@@ -173,3 +173,10 @@ cardano-cli query utxo \
 --testnet-magic 1
 ```
 
+```bash
+                           TxHash                                 TxIx        Amount
+--------------------------------------------------------------------------------------
+0be38e65bec5eebde5ca3308a75e5c8adcd1b184534b445c984185d7d6f9aee5     0        9699499669 lovelace + TxOutDatumNone
+c370cb076dc5893f548a8acf42fd507f4c21d667c036602e9092ca38f5fafbc5     0        200000000 lovelace + TxOutDatumNone
+```
+
