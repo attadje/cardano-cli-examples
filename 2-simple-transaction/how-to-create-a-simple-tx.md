@@ -17,6 +17,12 @@ addrUser1=$(cat /users/$(whoami)/testnet/priv/wallet/Djessy/djessy.addr)
 cardano-cli query utxo --address $addrUser1 --testnet-magic 1
 ```
 
+```bash
+                           TxHash                                 TxIx        Amount
+--------------------------------------------------------------------------------------
+8d4f02739f9f921e7d50cd7765527242a1ca5bd37dc479a550af99463290d89f     0        9799666446 lovelace + TxOutDatumNone
+```
+
 ### Build the transaction
 
 ```bash
@@ -42,6 +48,10 @@ cardano-cli transaction sign \
 --out-file tx-files/tx-one.signed 
 ```
 
+```bash
+Estimated transaction fee: Lovelace 166777
+```
+
 ### Flowchart of the transaction
 
 ```python
@@ -61,12 +71,25 @@ cardano-cli transaction submit \
 --testnet-magic 1
 ```
 
+```bash
+Transaction successfully submitted.
+```
+
 ### Check the receiver address 
 
 ```bash
 cardano-cli query utxo \
 --address $(cat /users/$(whoami)/testnet/priv/wallet/Drake/drake.addr) \
 --testnet-magic 1
+```
+
+```bash
+                           TxHash                                 TxIx        Amount
+--------------------------------------------------------------------------------------
+0be38e65bec5eebde5ca3308a75e5c8adcd1b184534b445c984185d7d6f9aee5     1        100000000 lovelace + TxOutDatumNone
+3e0f2493e7556968b9534e439111c08da761ac52783c7188b4b944068c0662ee     1        100000000 lovelace + TxOutDatumNone
+8d4f02739f9f921e7d50cd7765527242a1ca5bd37dc479a550af99463290d89f     1        100000000 lovelace + TxOutDatumNone
+a9ed1f9dd03fb6226f7ceab1c17e8dfb61ae0fadef7a51c0e53b672914676ca6     0        10000000000 lovelace + TxOutDatumNone
 ```
 
 ## 2) Create a transaction using the command build-raw
@@ -136,6 +159,10 @@ SVG("tx-files/tx-two.svg")
 cardano-cli transaction submit \
 --tx-file tx-files/tx-two.signed \
 --testnet-magic 1
+```
+
+```bash
+Transaction successfully submitted.
 ```
 
 ### Check the receiver address

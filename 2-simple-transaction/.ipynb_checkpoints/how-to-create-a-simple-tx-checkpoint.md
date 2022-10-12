@@ -17,6 +17,12 @@ addrUser1=$(cat /users/$(whoami)/testnet/priv/wallet/Djessy/djessy.addr)
 cardano-cli query utxo --address $addrUser1 --testnet-magic 1
 ```
 
+```bash
+                           TxHash                                 TxIx        Amount
+--------------------------------------------------------------------------------------
+8d4f02739f9f921e7d50cd7765527242a1ca5bd37dc479a550af99463290d89f     0        9799666446 lovelace + TxOutDatumNone
+```bash
+
 ### Build the transaction
 
 ```bash
