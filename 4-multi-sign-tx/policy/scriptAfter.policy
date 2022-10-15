@@ -1,0 +1,14 @@
+{
+  "type": "all",
+  "scripts":
+  [
+    {
+      "type": "after",
+      "slot": 8278668
+    },
+    {
+      "type": "sig",
+      "keyHash": "45e35c668298a740e4b39e192c37fdf6014b9eb9a2d45134a863b2b5"
+    }
+  ]
+}

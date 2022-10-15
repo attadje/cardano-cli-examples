@@ -1,0 +1,22 @@
+{
+  "type": "any",
+  "scripts":
+  [
+    {
+      "type": "before",
+      "slot": 8107662
+    },
+    {
+      "type": "sig",
+      "keyHash": "45e35c668298a740e4b39e192c37fdf6014b9eb9a2d45134a863b2b5"
+    },
+    {
+      "type": "sig",
+      "keyHash": "3933c66d722b50c90f70e34dfd76899e299b80567ba6980c1f4e0050"
+    },
+    {
+      "type": "sig",
+      "keyHash": "835bb523508858ef8167f3a88423f3287dd4ffcf86d23825a1cae438"
+    }
+  ]
+}
