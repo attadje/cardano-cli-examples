@@ -34,7 +34,7 @@ echo "    }" >> scriptAll.policy
 echo "  ]" >> scriptAll.policy
 echo "}" >> scriptAll.policy
 
-# Show the script in the consol
+# Show the script in the console
 cat scriptAll.policy
 ```
 
