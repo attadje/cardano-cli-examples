@@ -4,8 +4,8 @@ A multi-witness transaction, allow you to spend funds from different wallets tha
 For spending the funds from different wallets, you just have to provide a signature of the transanction of each addresses where the UTXOs is locked.
 
 **Table of contents**
-- [1) On-Chain Multi-Witness transaction](#1)-Build-the-transaction-using-the-command-build)
-- [2) Off-Chain Multi-Witness transaction](#2)-Build-the-transaction-using-the-command-build-raw)
+- [1) On-Chain Multi-Witness transaction](#1-Build-the-transaction-using-the-command-build)
+- [2) Off-Chain Multi-Witness transaction](#2-Build-the-transaction-using-the-command-build-raw)
 
 ### Get the UTXO from the addresses you want to used for the payment 
 
