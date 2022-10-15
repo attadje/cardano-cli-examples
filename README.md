@@ -6,6 +6,7 @@ Code examples using cardano-cli to create Transactions, Native Token, NFT from s
 - [Verify everything is set up properly](#Verify-everything-is-set-up-properly)
 - [How to create an address](https://github.com/attadje/cardano-cli-examples/blob/main/1-address/how-to-create-an-address.md)
 - [How to create a transaction](https://github.com/attadje/cardano-cli-examples/blob/main/2-simple-transaction/how-to-create-a-simple-tx.md)
+- [How to create a multi-witness transaction](https://github.com/attadje/cardano-cli-examples/blob/main/3-multi-witness-tx/how-to-create-a-multi-witness-tx.md)
 
 ## Prerequisites
 
