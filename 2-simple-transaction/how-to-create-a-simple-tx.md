@@ -2,8 +2,8 @@
 
 In this example we will create an submit a transaction to the testnet using the command build and build raw.
 
-- [1) On-Chain transaction creation](#1-Build-the-transaction-using-the-command-build)
-- [2) Off-Chain transaction creation](#2-Build-the-transaction-using-the-command-build-raw)
+- [1) Create the transaction On-Chain](#1-Build-the-transaction-using-the-command-build)
+- [2) Create the transaction Off-Chain](#2-Build-the-transaction-using-the-command-build-raw)
 
 <!-- #region tags=[] -->
 ## 1) Create a transaction using the command build
