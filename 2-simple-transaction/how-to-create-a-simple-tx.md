@@ -94,7 +94,7 @@ a9ed1f9dd03fb6226f7ceab1c17e8dfb61ae0fadef7a51c0e53b672914676ca6     0        10
 
 ## 2) Create a transaction using the command build-raw
 
-With the command build raw you can create the transaction of-chain before submit on chain.
+With the command build raw you can create the transaction of-chain before submit it on chain.
 
 
 ### Build the transaction
