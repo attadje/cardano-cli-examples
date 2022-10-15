@@ -1,6 +1,9 @@
 # How to create a simple transaction
 
-In this example we will create an submit a transaction to the testnet using the command build and build raw.
+In this example we will create an submit a transaction to the testnet using the command build (On-Chain) and build raw (Off-Chain).
+
+- [1) Create the transaction On-Chain](#1-Build-the-transaction-using-the-command-build)
+- [2) Create the transaction Off-Chain](#2-Build-the-transaction-using-the-command-build-raw)
 
 <!-- #region tags=[] -->
 ## 1) Create a transaction using the command build
