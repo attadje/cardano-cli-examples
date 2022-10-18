@@ -1,4 +1,4 @@
-# How to create a non fungible token
+# How to create a Non Fungible Token
 
 
 
