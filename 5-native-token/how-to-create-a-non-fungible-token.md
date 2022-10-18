@@ -1,17 +1,3 @@
----
-jupyter:
-  jupytext:
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.14.1
-  kernelspec:
-    display_name: Python 3
-    language: python
-    name: python3
----
-
 # How to create a non fungible token
 
 
@@ -65,7 +51,7 @@ echo "    }" >> $SCRIPT_PATH
 echo "  ]" >> $SCRIPT_PATH
 echo "}" >> $SCRIPT_PATH
 
-cat $SCRIPT_PATH | 
+cat $SCRIPT_PATH  
 ```
 
 ```bash
