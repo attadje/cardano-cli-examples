@@ -9,6 +9,7 @@ Code examples using cardano-cli to create Transactions, Native Token, NFT from s
 - [How to create a multi-witness transaction](https://github.com/attadje/cardano-cli-examples/blob/main/3-multi-witness-tx/how-to-create-a-multi-witness-tx.md)
 - [How to create a multi-sign transaction](https://github.com/attadje/cardano-cli-examples/blob/main/4-multi-sign-tx/how-to-create-a-multi-sign-tx.md)
 - [How to create/send/burn token](https://github.com/attadje/cardano-cli-examples/blob/main/5-native-token/how-to-create-send-burn-fungible-tokens.md)
+- [How to create a NFT token](https://github.com/attadje/cardano-cli-examples/blob/main/5-native-token/how-to-create-a-non-fungible-token.md)
 
 ## Prerequisites
 
