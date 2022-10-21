@@ -1,4 +1,4 @@
-# How to create a Non Fungible Token
+# How to create a non fungible token
 
 
 
@@ -51,24 +51,7 @@ echo "    }" >> $SCRIPT_PATH
 echo "  ]" >> $SCRIPT_PATH
 echo "}" >> $SCRIPT_PATH
 
-cat $SCRIPT_PATH  
-```
-
-```bash
-{
-  "type": "all",
-  "scripts":
-  [
-    {
-      "type":"before",
-      "slot":10442040
-    },
-    {
-      "type": "sig",
-      "keyHash": "13ba8318391c81b4b486ec3e718c6357c289dc73ea8c2ec59933e31d"
-    }
-  ]
-}
+cat $SCRIPT_PATH | 
 ```
 
 ### 4) Create the policy ID
@@ -79,10 +62,6 @@ cardano-cli transaction policyid \
 > policy/nft.policyid
 
 cat policy/nft.policyid
-```
-
-```bash
-c8d961ee981b4c7944b9b82b48fd609108fcf63dfc6196c6536d99a0
 ```
 
 ### 5) Create the metadata
@@ -112,20 +91,6 @@ echo "}" >> $NFT_METADATA_PATH
 cat $NFT_METADATA_PATH
 ```
 
-```bash
-
-{
-  "721": {
-    "c8d961ee981b4c7944b9b82b48fd609108fcf63dfc6196c6536d99a0": {
-     "Marsian": {
-     "descripption": "First man on mars generate with DALL-E-2 AI",
-     "image": "ipfs://QmbdvDECDxrZfcGoM6tzQLF68VgiKiCB2pNy8ioKZ4rTJS"
-   }
-  }
- }
-}
-```
-
 ### 5) Mint the token
 
 
@@ -135,13 +100,6 @@ cat $NFT_METADATA_PATH
 cardano-cli query utxo \
 --address $(cat /users/$(whoami)/testnet/priv/wallet/Djessy/djessy.addr) \
 --testnet-magic 1 
-```
-
-```bash
-                           TxHash                                 TxIx        Amount
---------------------------------------------------------------------------------------
-b74048f802c6001998cc544583d9473cd7e58adb79eac49f4da000e03c342a8b     0        9998983630 lovelace + TxOutDatumNone
-ca367e87ed8750475279267363192e8e55ec3febb6b54e7c8ec2b96e296155f2     1        2000000 lovelace + 50000000 4fd78aae5e7643885c5f0c63d26641e2e05870d8544af7c6c239ff46.4d415253 + TxOutDatumNone
 ```
 
   * #### 5.2 Mint the token 
@@ -183,11 +141,6 @@ cardano-cli transaction submit \
 --testnet-magic 1
 ```
 
-```bash
-Estimated transaction fee: Lovelace 186049
-Transaction successfully submitted.
-```
-
 ### Check the address where the NFT was minted 
 
 ```bash
@@ -196,10 +149,30 @@ cardano-cli query utxo \
 --testnet-magic 1 
 ```
 
+```python
+!jupytext --to markdown how-to-create-a-non-fungible-token.ipynb
+```
+
+### Get the on-chain data of the asset
+
+```python
+from cardano_explorer import blockfrost_api as bf
+
+preprod= bf.Auth("preprod")
+# On blockfrost the assetis the policyID + Asset Name
+asset=c8d961ee981b4c7944b9b82b48fd609108fcf63dfc6196c6536d99a04d61727369616e
+preprod.specific_asset("c8d961ee981b4c7944b9b82b48fd609108fcf63dfc6196c6536d99a04d61727369616e")
+```
+
 ```bash
-                           TxHash                                 TxIx        Amount
---------------------------------------------------------------------------------------
-0c7863e82595e534e5e66cb96aeffe6f62db88bd9d9dc4a3335e5c6571d791b8     0        9996797581 lovelace + TxOutDatumNone
-0c7863e82595e534e5e66cb96aeffe6f62db88bd9d9dc4a3335e5c6571d791b8     1        2000000 lovelace + 1 c8d961ee981b4c7944b9b82b48fd609108fcf63dfc6196c6536d99a0.4d61727369616e + TxOutDatumNone
-ca367e87ed8750475279267363192e8e55ec3febb6b54e7c8ec2b96e296155f2     1        2000000 lovelace + 50000000 4fd78aae5e7643885c5f0c63d26641e2e05870d8544af7c6c239ff46.4d415253 + TxOutDatumNone
+{'asset': 'c8d961ee981b4c7944b9b82b48fd609108fcf63dfc6196c6536d99a04d61727369616e',
+ 'policy_id': 'c8d961ee981b4c7944b9b82b48fd609108fcf63dfc6196c6536d99a0',
+ 'asset_name': '4d61727369616e',
+ 'fingerprint': 'asset162z4yxy28ydzmnm0ns7k9snqr9vp6wm2lcnl0f',
+ 'quantity': '1',
+ 'initial_mint_tx_hash': '0c7863e82595e534e5e66cb96aeffe6f62db88bd9d9dc4a3335e5c6571d791b8',
+ 'mint_or_burn_count': 1,
+ 'onchain_metadata': {'image': 'ipfs://QmbdvDECDxrZfcGoM6tzQLF68VgiKiCB2pNy8ioKZ4rTJS',
+  'descripption': 'First man on mars generate with DALL-E-2 AI'},
+ 'metadata': None}
 ```

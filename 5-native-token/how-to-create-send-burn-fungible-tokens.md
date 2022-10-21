@@ -1,3 +1,17 @@
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.3'
+      jupytext_version: 1.14.1
+  kernelspec:
+    display_name: Python 3
+    language: python
+    name: python3
+---
+
 # How to create fungible tokens
 
 Native tokens on cardano are executed directly on-chain,  
@@ -47,19 +61,6 @@ echo "}" >> $SCRIPT_PATH
 cat policy/marsToken.script
 ```
 
-```bash
-{
-  "type": "all",
-  "scripts":
-  [
-    {
-      "type": "sig",
-      "keyHash": "d5260b3f8a8b676dbf79b735c5f59881290405af8728a4893ac96291"
-    }
-  ]
-}
-```
-
 ### 4) Create the policy ID
 
 The policy ID is the hash of the policy script.
@@ -70,10 +71,6 @@ cardano-cli transaction policyid \
 > policy/mars.policyid
 
 cat policy/mars.policyid
-```
-
-```bash
-4fd78aae5e7643885c5f0c63d26641e2e05870d8544af7c6c239ff46
 ```
 
 ### 5) Mint the token
@@ -87,14 +84,6 @@ MINT_ADDR=$(cat /users/$(whoami)/testnet/priv/wallet/Drake/drake.addr)
 cardano-cli query utxo \
 --address $MINT_ADDR \
 --testnet-magic 1
-```
-
-```bash
-                           TxHash                                 TxIx        Amount
---------------------------------------------------------------------------------------
-0be38e65bec5eebde5ca3308a75e5c8adcd1b184534b445c984185d7d6f9aee5     1        100000000 lovelace + TxOutDatumNone
-8d4f02739f9f921e7d50cd7765527242a1ca5bd37dc479a550af99463290d89f     1        100000000 lovelace + TxOutDatumNone
-c370cb076dc5893f548a8acf42fd507f4c21d667c036602e9092ca38f5fafbc5     1        9799824379 lovelace + TxOutDatumNone
 ```
 
   * #### 5.2 Mint the token 
@@ -129,20 +118,12 @@ cardano-cli transaction sign \
 --out-file tx-files/mintTX.signed 
 ```
 
-```bash
-Estimated transaction fee: Lovelace 177865
-```
-
 ### Submint the transaction
 
 ```bash
 cardano-cli transaction submit \
 --tx-file tx-files/mintTX.signed \
 --testnet-magic 1
-```
-
-```bash
-Transaction successfully submitted.
 ```
 
 ### Check UTXOs from the address
@@ -153,15 +134,6 @@ MINT_ADDR=$(cat /users/$(whoami)/testnet/priv/wallet/Drake/drake.addr)
 cardano-cli query utxo \
 --address $MINT_ADDR \
 --testnet-magic 1
-```
-
-```bash
-                           TxHash                                 TxIx        Amount
---------------------------------------------------------------------------------------
-37906b562ec69696d58e57eaa06b73ef32a5a427d3f60a2389379e27585de5f9     0        97822135 lovelace + TxOutDatumNone
-37906b562ec69696d58e57eaa06b73ef32a5a427d3f60a2389379e27585de5f9     1        2000000 lovelace + 1000000000 4fd78aae5e7643885c5f0c63d26641e2e05870d8544af7c6c239ff46.4d415253 + TxOutDatumNone
-8d4f02739f9f921e7d50cd7765527242a1ca5bd37dc479a550af99463290d89f     1        100000000 lovelace + TxOutDatumNone
-c370cb076dc5893f548a8acf42fd507f4c21d667c036602e9092ca38f5fafbc5     1        9799824379 lovelace + TxOutDatumNone
 ```
 
 # How to send fungible token
@@ -201,11 +173,6 @@ cardano-cli transaction submit \
 --testnet-magic 1
 ```
 
-```bash
-Estimated transaction fee: Lovelace 179449
-Transaction successfully submitted.
-```
-
 ### Check UTXOs from the address
 
 ```bash
@@ -214,13 +181,6 @@ MINT_ADDR=$(cat /users/$(whoami)/testnet/priv/wallet/Djessy/djessy.addr)
 cardano-cli query utxo \
 --address $MINT_ADDR \
 --testnet-magic 1
-```
-
-```bash
-                           TxHash                                 TxIx        Amount
---------------------------------------------------------------------------------------
-b74048f802c6001998cc544583d9473cd7e58adb79eac49f4da000e03c342a8b     0        9998983630 lovelace + TxOutDatumNone
-ca367e87ed8750475279267363192e8e55ec3febb6b54e7c8ec2b96e296155f2     1        2000000 lovelace + 50000000 4fd78aae5e7643885c5f0c63d26641e2e05870d8544af7c6c239ff46.4d415253 + TxOutDatumNone
 ```
 
 # How to burn fungible token
@@ -237,15 +197,6 @@ MINT_ADDR=$(cat /users/$(whoami)/testnet/priv/wallet/Drake/drake.addr)
 cardano-cli query utxo \
 --address $MINT_ADDR \
 --testnet-magic 1
-```
-
-```bash
-                           TxHash                                 TxIx        Amount
---------------------------------------------------------------------------------------
-37906b562ec69696d58e57eaa06b73ef32a5a427d3f60a2389379e27585de5f9     0        97822135 lovelace + TxOutDatumNone
-c370cb076dc5893f548a8acf42fd507f4c21d667c036602e9092ca38f5fafbc5     1        9799824379 lovelace + TxOutDatumNone
-ca367e87ed8750475279267363192e8e55ec3febb6b54e7c8ec2b96e296155f2     0        97820551 lovelace + TxOutDatumNone
-ca367e87ed8750475279267363192e8e55ec3febb6b54e7c8ec2b96e296155f2     2        2000000 lovelace + 950000000 4fd78aae5e7643885c5f0c63d26641e2e05870d8544af7c6c239ff46.4d415253 + TxOutDatumNone
 ```
 
 ### 2) Burn the tokens at the address
@@ -290,11 +241,6 @@ cardano-cli transaction submit \
 --testnet-magic 1
 ```
 
-```bash
-Estimated transaction fee: Lovelace 179449
-Transaction successfully submitted.
-```
-
 ### Check UTXOs from the address
 
 ```bash
@@ -305,12 +251,35 @@ cardano-cli query utxo \
 --testnet-magic 1
 ```
 
-```bash
-                           TxHash                                 TxIx        Amount
---------------------------------------------------------------------------------------
-37906b562ec69696d58e57eaa06b73ef32a5a427d3f60a2389379e27585de5f9     0        97822135 lovelace + TxOutDatumNone
-75a02329eb8ba228ca15dfe4d59bedf1a18c6cb196aa06f35839232790b9b8d3     0        97641102 lovelace + TxOutDatumNone
-75a02329eb8ba228ca15dfe4d59bedf1a18c6cb196aa06f35839232790b9b8d3     1        2000000 lovelace + 50000000 4fd78aae5e7643885c5f0c63d26641e2e05870d8544af7c6c239ff46.4d415253 + TxOutDatumNone
-c370cb076dc5893f548a8acf42fd507f4c21d667c036602e9092ca38f5fafbc5     1        9799824379 lovelace + TxOutDatumNone
+```python
+!jupytext --to markdown how-to-create-send-burn-fungible-tokens.ipynb
 ```
 
+```bash
+
+# Encoded the token name in hex format
+ASSET_NAME=$(echo -n "MARS" | xxd -ps | tr -d '\n')
+TOKEN_SUPPLY=1000000000
+POLICY_ID=$(cat policy/mars.policyid)
+MINT_ADDR=$(cat /users/$(whoami)/testnet/priv/wallet/Drake/drake.addr)
+UTXO_IN=0be38e65bec5eebde5ca3308a75e5c8adcd1b184534b445c984185d7d6f9aee5#1
+UTXO_IN_AMOUNT=100000000
+# The tokens need to have a minimum value
+# I set it to 2 ADA but it depend of bundle inside the txout (bundle = "AMOUNT of token policyID.AssetName")
+MIN_ADA_VALUE=2000000
+
+
+
+cardano-cli transaction calculate-min-required-utxo \
+--babbage-era \
+--protocol-params-file tx-files/protocol-params.json \
+--tx-out $MINT_ADDR+"$TOKEN_SUPPLY $POLICY_ID.$ASSET_NAME" 
+```
+
+```python
+!man cardano-cli 
+```
+
+```python
+
+```
